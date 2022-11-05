@@ -1,0 +1,17 @@
+
+
+
+
+    <script>
+        function Outer(){
+            var x = 20;
+            function Inner(){
+                var y = 30;
+                var z = x + y;
+                return z ;
+            }
+            return Inner();
+        }
+        document.write("Addition=" + Outer());
+    
+    </script>
