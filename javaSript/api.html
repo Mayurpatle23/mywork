@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyload(){
+            fetch("http://fakestoreapi.com/products&quot");
+            then(function(res){
+                return res.json();
+            })
+            .then(function(products){
+                for(var item of products){
+                    var div = document.createElement("div");
+                    div.className = "card m-2 p-2";
+                    div.style.width = "200px";
+                    div.innerHTML = `
+                      <img src=${item.image} height="160" class="card-img-top">
+                      <div class="card-header" style="height:180px">
+                         <p>${item.title}</p>
+                      </div>
+                      <div class="card-body">
+                         <dl>
+                            <dt>Price</dt>
+                            <dd>${item.price}</dd>
+                            <dt>Rating</dt>
+                            <dd>${item.rating.rate} [${item.rating.count}]</dd>
+                         </dl>
+                      </div>
+                    `;
+                    document.getElementById("catalog").appendChild(div);
+                }
+                
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <div id="catalog" class="d-flex flex-wrap mt-3">
+
+    </div>
+</body>
+</html>9999999999999999999999999999999999999
