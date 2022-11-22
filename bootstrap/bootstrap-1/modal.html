@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+    <h3>Modals</h3>
+    <button data-bs-target="#login" data-bs-toggle="modal" class="btn btn-primary">Login</button>
+    <button data-bs-target="#preview" data-bs-toggle="modal" class="btn btn-success">Product Preview</button>
+    <div class="modal fade" id="login">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3> <span class="bi bi-person-fill"></span> User Login</h3>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <dl>
+                    <dt>User Name</dt>
+                    <dd><input type="text" class="form-control"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password" class="form-control"></dd>
+                    <dt>User Name</dt>
+                    <dd><input type="text" class="form-control"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password" class="form-control"></dd>
+                </dl>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary">Login</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Preview Model-->
+    <div class="modal fade" id="preview">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Anurag</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <img src="/images/ANURAG.jpeg" height="200" class="card-img-top">
+                        <div class="card-header">
+                            <dl>
+                                <dt>Price</dt>
+                                <dd>5700.44</dd>
+                                <dt>Stock</dt>
+                                <dd>Available</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/bootstrap/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

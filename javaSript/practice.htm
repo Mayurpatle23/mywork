@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+         body {
+        background-color:rgb(82, 68, 154);
+        color:lightcoral;
+
+        }
+    </style>
+    <script>
+        userPin={
+            pincode:"0011"
+        }
+        var i=3;
+        function VerifyClick(){
+            var pin=document.getElementById("pin").value;
+
+            while(i>0){
+                if(userPin.pincode===pin){
+                    document.getElementById("pinError").innerHTML="pin Verified Successfully".fontcolor("green").fontsize("5");
+                    break;
+                }
+                else if(i==1){
+                    document.getElementById("pinError").innerHTML="Your Card Blocked".fontcolor("red").fontsize("6");
+                    document.getElementById("pin").disabled=true;
+                    break;
+                }
+                else{
+                    document.getElementById("pinError").innerHTML=`Invalid Pin You have ${i-1} attempt left`.fontcolor("red").fontsize("4");
+                    i--;
+                    return;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div >
+        <div><label class="form-label mt-2"><b style="color:white">Pincode Verification:</b></label></div>
+        <div id="pinError"></div>
+        <input type="text" id="pin" class="form-control w-100">
+        <div class="text-center">
+            <button class="btn btn-success mt-3" onclick="VerifyClick()">Verify</button>
+        </div>
+    </div>
+
+</body>
+</html>

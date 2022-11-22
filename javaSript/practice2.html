@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="../bootstrap/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h1 align="center">BMI Calculator</h1>
+        </div>
+            <div class="body">
+                <form class="w-50 m-auto" onsubmit="return false">
+                    <div class="form-group">
+                        <label><b>Weight(kg) :</b></label>
+                        <input type="text" name="" placeholder="Enter Weight" required id="weight" class="form-control  m-3">
+                    </div>
+                    <div class="form-group">
+                        <label><b>Height(cm) :</b></label>
+                        <input type="text" name="" placeholder="Enter Height"   required id="height" class="form-control m-3">
+                    </div>
+                    <div class="form-group">
+                        <label><b>BMI Value :</b></label>
+                        <input type="text" name="" id="bmiValue" class="form-control m-3">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-success m-3" onclick="ClickbmiValue()"> Check BMI</button>
+                    </div>
+                </form>
+                <div>
+                    <div class="card-footer text-center">A Healthy BMI Range between 18 and 26.</div>
+                </div>
+            </div>
+    </div>
+
+    <script src="../bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../bootstrap/node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>
+
