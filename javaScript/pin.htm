@@ -24,7 +24,7 @@
 
             while(i>0){
                 if(userPin.pincode===pin){
-                    document.getElementById("pinError").innerHTML="pin Verified Successfully".fontcolor("green").fontsize("5");
+                    document.getElementById("pinError").innerHTML="Pin Verified Successfully".fontcolor("green-dark").fontsize("5");
                     break;
                 }
                 else if(i==1){
@@ -33,7 +33,7 @@
                     break;
                 }
                 else{
-                    document.getElementById("pinError").innerHTML=`Invalid Pin You have ${i-1} attempt left`.fontcolor("red").fontsize("4");
+                    document.getElementById("pinError").innerHTML=`Invalid Pin You have ${i-1} attempt left`.fontcolor("grey").fontsize("4");
                     i--;
                     return;
                 }
